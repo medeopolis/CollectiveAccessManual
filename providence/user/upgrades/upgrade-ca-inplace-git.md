@@ -92,3 +92,13 @@ Run CA included fix permissions tool. If the web server is not correctly detecte
 ./support/bin/caUtils fix-permissions
 ```
 
+Restart PHP-FPM (Note the service name varies by platform)
+```
+systemctl restart php-fpm
+```
+
+Clear CA caches (Note: This will remove user uploaded files from media importer directories).
+```
+./support/bin/caUtils clear-caches
+```
+
