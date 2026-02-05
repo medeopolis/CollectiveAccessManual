@@ -84,10 +84,10 @@ chmod 755 support/bin/*
 On RHEL selinux may also need to be adjusted.
 ```
 chcon -R -t httpd_sys_content_t ./
-chcon -R -t httpd_sys_rw_content_t ./app/log/ ./app/tmp/ ./media
+chcon -R -t httpd_sys_rw_content_t ./app/log/ ./app/tmp/ ./media ./uploads
 ```
 
-Run CA included fix permissions tool
+Run CA included fix permissions tool. If the web server is not correctly detected pass `--user` and `--group` options.
 ```
 ./support/bin/caUtils fix-permissions
 ```
